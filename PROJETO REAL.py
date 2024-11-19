@@ -294,6 +294,56 @@ def Ppag():
  
         btnP = Button(menu, text="Projeto" , command=Pcad_pag,  width= 23,bg="Black",fg="White")
         btnP.place(x=865, y=175)
+
+    def Excpag():
+        def id_arquiteto():
+            Label2.destroy()
+            Label3.destroy()
+            btnA.destroy()
+            btnC.destroy()
+
+            Label5 = Label(menu,text="------------------------Escolha a opção de exclusão---------------------:",bg="Black",fg="White", font="Courier 10 bold")
+            Label5.pack()
+
+            Label6 = Label(menu,text="Informe o seu ID: ",background="White", font="Courier 10 bold")
+            Label6.pack()
+ 
+            id = Entry(menu, width=50, background="Black", foreground="White")
+            id.place(x=90, y=225)
+
+            btnId = Button(menu, text="Submit", command=id.get(),  width= 23,bg="Black",fg="White")
+            btnId.place(x=167, y=125)
+
+            if id:
+                Label6.destroy()
+                id.destroy()
+
+                Label5 = Label(menu,text="------------------------Escolha a opção de exclusão---------------------:",bg="Black",fg="White", font="Courier 10 bold")
+
+                Label7 = Label(menu,text="Informe o projeto que deseja excluir: ",background="White", font="Courier 10 bold")
+                Label7.pack()
+
+                id = Entry(menu, width=50, background="Black", foreground="White")
+                id.place(x=90, y=225)
+    
+        Label1.destroy()
+        btn1.destroy()
+        btn2.destroy()
+        btn3.destroy()
+        btn4.destroy()
+        btn5.destroy()
+ 
+        Label2 = Label(menu,text="------------------------Escolha a opção de exclusão---------------------:",bg="Black",fg="White", font="Courier 10 bold")
+        Label2.pack()
+
+        Label3 = Label(menu,text="Você é arquiteto ou cliente? ",background="White", font="Courier 10 bold")
+        Label3.pack()
+ 
+        btnA = Button(menu, text="Arquiteto",  width= 23, command=id_arquiteto,bg="Black",fg="White")
+        btnA.place(x=167, y=75)
+ 
+        btnC = Button(menu, text="Cliente",  width= 23,bg="Black",fg="White")
+        btnC.place(x=167, y=125)
  
     def Altpag():
         def AltArq():
@@ -684,12 +734,6 @@ def Ppag():
             btnVoltar = Button(menu, text="Voltar", command=Volt, width=15,bg="Black",fg="White")
             btnVoltar.place(x=1080, y=260)
             
-
-            
-
-
-
-
         Label1.destroy()
         btn1.destroy()
         btn2.destroy()
@@ -709,9 +753,6 @@ def Ppag():
         btnP = Button(menu, text="Projeto" ,command=PesqProj,  width= 23,bg="Black",fg="White")
         btnP.place(x=865, y=175)
 
-        
-
-
     Label1 = Label(menu,text="------------------------------------------------------------------------------------------------------------------------Sistema de Gerenciamento UGC------------------------------------------------------------------------------------------------------------------------",bg="Black",fg="White", font="Courier 10 bold")
     Label1.pack()
 
@@ -724,7 +765,7 @@ def Ppag():
     btn2.place(x=865, y=125)
  
     #botao D
-    btn3 = Button(menu, text="Deletar" ,  width= 23,bg="Black",fg="White")
+    btn3 = Button(menu, text="Deletar" , command=Excpag,  width= 23,bg="Black",fg="White")
     btn3.place(x=865, y=175)
  
     #botao P

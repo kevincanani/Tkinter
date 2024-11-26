@@ -243,8 +243,6 @@ tk.Button(window, text="Cadastrar Cliente", command=lambda: create('C')).place(x
 tk.Button(window, text="Cadastrar Projeto", command=lambda: create('P')).place(x=750,y=420)
 
 # Atualizar
-tk.Button(window, text="Alterar Arquiteto", command=lambda: update('A')).place(x=535,y=450)
-tk.Button(window, text="Alterar Cliente", command=lambda: update('C')).place(x=650,y=450)
 tk.Button(window, text="Alterar Projeto", command=lambda: update('P')).place(x=750,y=450)
 
 # Deletar

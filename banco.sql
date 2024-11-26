@@ -2,7 +2,7 @@ create database escritorio;
 
 create table arquiteto(
     id int(5),
-    nome int(5),
+    nome varchar(45),
     CPF int(11),
     RG int(9),
     telefone int(11),
@@ -14,7 +14,7 @@ create table arquiteto(
 
 create table cliente(
     id int(5),
-    nome int(5),
+    nome varchar(45),
     CPF int(11),
     RG int(9),
     telefone int(11),

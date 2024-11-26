@@ -176,49 +176,50 @@ def sair():
 # Criando a janela principal
 window = tk.Tk()
 window.title("Controle de Cadastro")
+window['bg'] = "Navy Blue"
 
 # Labels
-tk.Label(window, text="Categoria (A para Arquiteto, C para Cliente, P para Projeto):").place(x=550,y=70)
-tk.Label(window, text="ID (para Alterar ou Deletar):").place(x=550,y=90)
-tk.Label(window, text="Nome:").place(x=550,y=110)
-tk.Label(window, text="CPF:").place(x=550,y=130)
-tk.Label(window, text="RG:").place(x=550,y=150)
-tk.Label(window, text="Telefone:").place(x=550,y=170)
-tk.Label(window, text="Email:").place(x=550,y=190)
-tk.Label(window, text="Cidade:").place(x=550,y=210)
-tk.Label(window, text="Estado:").place(x=550,y=230)
-tk.Label(window, text="Endereço:").place(x=550,y=250)
+tk.Label(window, text="Categoria (A para Arquiteto, C para Cliente, P para Projeto):",fg="Lime",bg="Navy Blue").place(x=550,y=70)
+tk.Label(window, text="ID (para Alterar ou Deletar):",fg="Lime",bg="Navy Blue").place(x=550,y=90)
+tk.Label(window, text="Nome:",fg="Lime",bg="Navy Blue").place(x=550,y=110)
+tk.Label(window, text="CPF:",fg="Lime",bg="Navy Blue").place(x=550,y=130)
+tk.Label(window, text="RG:",fg="Lime",bg="Navy Blue").place(x=550,y=150)
+tk.Label(window, text="Telefone:",fg="Lime",bg="Navy Blue").place(x=550,y=170)
+tk.Label(window, text="Email:",fg="Lime",bg="Navy Blue").place(x=550,y=190)
+tk.Label(window, text="Cidade:",fg="Lime",bg="Navy Blue").place(x=550,y=210)
+tk.Label(window, text="Estado:",fg="Lime",bg="Navy Blue").place(x=550,y=230)
+tk.Label(window, text="Endereço:",fg="Lime",bg="Navy Blue").place(x=550,y=250)
 
 # Novos campos para projeto
-tk.Label(window, text="Descrição do Projeto:").place(x=550,y=270)
-tk.Label(window, text="Tipo de Projeto:").place(x=550,y=290)
-tk.Label(window, text="Orçamento:").place(x=550,y=310)
-tk.Label(window, text="Data de Início:").place(x=550,y=330)
-tk.Label(window, text="Data de Entrega:").place(x=550,y=350)
-tk.Label(window, text="ID do Cliente:").place(x=550,y=370)
-tk.Label(window, text="ID do Arquiteto:").place(x=550,y=390)
+tk.Label(window, text="Descrição do Projeto:",fg="Lime",bg="Navy Blue").place(x=550,y=270)
+tk.Label(window, text="Tipo de Projeto:",fg="Lime",bg="Navy Blue").place(x=550,y=290)
+tk.Label(window, text="Orçamento:",fg="Lime",bg="Navy Blue").place(x=550,y=310)
+tk.Label(window, text="Data de Início:",fg="Lime",bg="Navy Blue").place(x=550,y=330)
+tk.Label(window, text="Data de Entrega:",fg="Lime",bg="Navy Blue").place(x=550,y=350)
+tk.Label(window, text="ID do Cliente:",fg="Lime",bg="Navy Blue").place(x=550,y=370)
+tk.Label(window, text="ID do Arquiteto:",fg="Lime",bg="Navy Blue").place(x=550,y=390)
 
 # Entry widgets
-op_entry = tk.Entry(window)
-id_entry = tk.Entry(window)
-nome_entry = tk.Entry(window)
-cpf_entry = tk.Entry(window)
-rg_entry = tk.Entry(window)
-telefone_entry = tk.Entry(window)
-email_entry = tk.Entry(window)
-cidade_entry = tk.Entry(window)
-estado_entry = tk.Entry(window)
-endereco_entry = tk.Entry(window)
-descricao_entry = tk.Entry(window)
-tipo_projeto_entry = tk.Entry(window)
-prazo_entry = tk.Entry(window)
-data_inicio_entry = tk.Entry(window)
-data_entrega_entry = tk.Entry(window)
-cliente_id_entry = tk.Entry(window)
-arquiteto_id_entry = tk.Entry(window)
+op_entry = tk.Entry(window,background="Black",foreground="White",)
+id_entry = tk.Entry(window,background="Black",foreground="White",)
+nome_entry = tk.Entry(window,background="Black",foreground="White",)
+cpf_entry = tk.Entry(window,background="Black",foreground="White",)
+rg_entry = tk.Entry(window,background="Black",foreground="White",)
+telefone_entry = tk.Entry(window,background="Black",foreground="White",)
+email_entry = tk.Entry(window,background="Black",foreground="White",)
+cidade_entry = tk.Entry(window,background="Black",foreground="White",)
+estado_entry = tk.Entry(window,background="Black",foreground="White",)
+endereco_entry = tk.Entry(window,background="Black",foreground="White",)
+descricao_entry = tk.Entry(window,background="Black",foreground="White",)
+tipo_projeto_entry = tk.Entry(window,background="Black",foreground="White",)
+prazo_entry = tk.Entry(window,background="Black",foreground="White",)
+data_inicio_entry = tk.Entry(window,background="Black",foreground="White",)
+data_entrega_entry = tk.Entry(window,background="Black",foreground="White",)
+cliente_id_entry = tk.Entry(window,background="Black",foreground="White",)
+arquiteto_id_entry = tk.Entry(window,background="Black",foreground="White",)
 
 # Grid de entradas
-op_entry.place(x=890,y=70)
+op_entry.place(x=890,y=70,)
 id_entry.place(x=890,y=90)
 nome_entry.place(x=890,y=110)
 cpf_entry.place(x=890,y=130)
@@ -238,25 +239,25 @@ arquiteto_id_entry.place(x=890,y=390)
 
 # Botões
 # Cadastro
-tk.Button(window, text="Cadastrar Arquiteto", command=lambda: create('A')).place(x=535,y=420)
-tk.Button(window, text="Cadastrar Cliente", command=lambda: create('C')).place(x=650,y=420)
-tk.Button(window, text="Cadastrar Projeto", command=lambda: create('P')).place(x=750,y=420)
+tk.Button(window, text="Cadastrar Arquiteto",background="Black",foreground="White", command=lambda: create('A')).place(x=535,y=420)
+tk.Button(window, text="Cadastrar Cliente",background="Black",foreground="White", command=lambda: create('C')).place(x=650,y=420)
+tk.Button(window, text="Cadastrar Projeto",background="Black",foreground="White", command=lambda: create('P')).place(x=750,y=420)
 
 # Atualizar
-tk.Button(window, text="Alterar Projeto", command=lambda: update('P')).place(x=750,y=450)
+tk.Button(window, text="Alterar Projeto",background="Black",foreground="White", command=lambda: update('P')).place(x=750,y=450)
 
 # Deletar
-tk.Button(window, text="Excluir Arquiteto", command=lambda: delete('A')).place(x=535,y=480)
-tk.Button(window, text="Excluir Cliente", command=lambda: delete('C')).place(x=650,y=480)
-tk.Button(window, text="Excluir Projeto", command=lambda: delete('P')).place(x=750,y=480)
+tk.Button(window, text="Excluir Arquiteto",background="Black",foreground="White", command=lambda: delete('A')).place(x=535,y=480)
+tk.Button(window, text="Excluir Cliente",background="Black",foreground="White", command=lambda: delete('C')).place(x=650,y=480)
+tk.Button(window, text="Excluir Projeto",background="Black",foreground="White", command=lambda: delete('P')).place(x=750,y=480)
 
 # Pesquisar
-tk.Button(window, text="Pesquisar Arquiteto", command=lambda: read('A')).place(x=535,y=510)
-tk.Button(window, text="Pesquisar Cliente", command=lambda: read('C')).place(x=650,y=510)
-tk.Button(window, text="Pesquisar Projeto", command=lambda: read('P')).place(x=750,y=510)
+tk.Button(window, text="Pesquisar Arquiteto",background="Black",foreground="White", command=lambda: read('A')).place(x=535,y=510)
+tk.Button(window, text="Pesquisar Cliente",background="Black",foreground="White", command=lambda: read('C')).place(x=650,y=510)
+tk.Button(window, text="Pesquisar Projeto",background="Black",foreground="White", command=lambda: read('P')).place(x=750,y=510)
 
 # Botão Sair
-tk.Button(window, text="Sair", command=sair).place(x=535,y=535)
+tk.Button(window, text="Sair",background="Black",foreground="White", command=sair).place(x=535,y=535)
 
 # Executando a janela
 window.mainloop()

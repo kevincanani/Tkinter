@@ -105,7 +105,7 @@ def read(categoria):
         dados = cursor.fetchall()
         if dados:
             for dado in dados:
-                messagebox.showinfo("Resultado", f"ID: {dado[0]}\nArquiteto: {dado[1]}")
+                messagebox.showinfo("Resultado", f"ID: {dado[0]}\nArquiteto: {dado[1]}\nCPF: {dado[2]}\nRG: {dado[3]}\nTelefone: {dado[4]}\nEmail: {dado[5]}\nCidade: {dado[6]}\nEstado: {dado[7]}\nEndereço: {dado[8]}")
         else:
             messagebox.showinfo("Resultado", "Nenhum arquiteto encontrado!")
 
@@ -117,7 +117,7 @@ def read(categoria):
         dados = cursor.fetchall()
         if dados:
             for dado in dados:
-                messagebox.showinfo("Resultado", f"ID: {dado[0]}\nCliente: {dado[1]}")
+                messagebox.showinfo("Resultado", f"ID: {dado[0]}\nCliente: {dado[1]}\nCPF: {dado[2]}\nRG: {dado[3]}\nTelefone: {dado[4]}\nEmail: {dado[5]}\nCidade: {dado[6]}\nEstado: {dado[7]}\nEndereço: {dado[8]}")
         else:
             messagebox.showinfo("Resultado", "Nenhum cliente encontrado!")
 

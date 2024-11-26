@@ -94,7 +94,7 @@ def read(categoria):
         dados = cursor.fetchall()
         if dados:
             for dado in dados:
-                messagebox.showinfo("Resultado", f"ID: {dado[0]}\nProjeto: {dado[1]}\nTipo: {dado[2]}")
+                messagebox.showinfo("Resultado", f"ID: {dado[0]}\nProjeto: {dado[1]}\nTipo: {dado[2]}\nOrçamento: {dado[3]}\nDataInicio: {dado[4]}\nDataEntrega {dado[5]}\nIdCliente: {dado[6]}\nIdArquiteto {dado[7]} ")
         else:
             messagebox.showinfo("Resultado", "Nenhum projeto encontrado!")
 

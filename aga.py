@@ -98,6 +98,29 @@ def read(categoria):
         else:
             messagebox.showinfo("Resultado", "Nenhum projeto encontrado!")
 
+    elif categoria == 'A':  # Arquiteto
+        id = id_entry.get()
+        comando_sql = f"SELECT * FROM arquiteto WHERE id = {id}"
+        cursor.execute(comando_sql)
+        dados = cursor.fetchall()
+        if dados:
+            for dado in dados:
+                messagebox.showinfo("Resultado", f"ID: {dado[0]}\nArquiteto: {dado[1]}")
+        else:
+            messagebox.showinfo("Resultado", "Nenhum arquiteto encontrado!")
+
+    
+    elif categoria == 'C':  # Cliente
+        id = id_entry.get()
+        comando_sql = f"SELECT * FROM cliente WHERE id = {id}"
+        cursor.execute(comando_sql)
+        dados = cursor.fetchall()
+        if dados:
+            for dado in dados:
+                messagebox.showinfo("Resultado", f"ID: {dado[0]}\nCliente: {dado[1]}")
+        else:
+            messagebox.showinfo("Resultado", "Nenhum cliente encontrado!")
+
 # Função de atualizar (Alterar)
 def update(categoria):
     id = id_entry.get()
@@ -133,6 +156,17 @@ def delete(categoria):
         cursor.execute(comando_sql)
         conexao_banco.commit()
         messagebox.showinfo("Sucesso", "Projeto deletado com sucesso!")
+    elif categoria == 'A':  # Arquiteto
+        comando_sql = f"DELETE FROM arquiteto WHERE id={id}"
+        cursor.execute(comando_sql)
+        conexao_banco.commit()
+        messagebox.showinfo("Sucesso", "Arquiteto deletado com sucesso!")
+    elif categoria == 'C':  # Cliente
+        comando_sql = f"DELETE FROM cliente WHERE id={id}"
+        cursor.execute(comando_sql)
+        conexao_banco.commit()
+        messagebox.showinfo("Sucesso", "Cliente deletado com sucesso!")
+
 
 # Função de sair
 def sair():
